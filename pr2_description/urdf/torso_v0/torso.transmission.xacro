@@ -7,10 +7,14 @@
 
   <xacro:macro name="pr2_torso_transmission_v0" params="name">
 
-    <transmission type="pr2_mechanism_model/SimpleTransmission" name="${name}_trans">
-      <actuator name="${name}_motor" />
-      <joint name="${name}_joint" />
-      <mechanicalReduction>-47641.53</mechanicalReduction>
+    <transmission name="${name}_trans">
+      <type>pr2_mechanism_model/SimpleTransmission</type>
+      <actuator name="${name}_motor">
+        <mechanicalReduction>-47641.53</mechanicalReduction>
+      </actuator>
+      <joint name="${name}_joint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
       <simulated_actuated_joint name="${name}_motor_screw_joint"
                                 simulated_reduction="3141.6" />
     </transmission>
