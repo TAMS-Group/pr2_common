@@ -91,7 +91,7 @@
       <limit lower="-2.3213" upper="0.00" effort="30" velocity="${VELOCITY_LIMIT_SCALE*5.5}" /> <!-- alpha tested velocity and effort limits -->
       <safety_controller k_position="100" k_velocity="3" soft_lower_limit="${-2.3213+0.2}" soft_upper_limit="${0.00-0.15}" />
       <xacro:if value="$(arg calibrated)">
-        <calibration falling="${-1.1606 + cal_r_elbow_flex_flag + calibration_data['transforms'][side+'_elbow_flex_joint'][4]}" />
+        <calibration falling="${calibration_data['calibration'][side+'_elbow_flex_joint']}" />
       </xacro:if>
       <xacro:unless value="$(arg calibrated)">
         <calibration falling="${-1.1606 + cal_r_elbow_flex_flag}"/>
@@ -139,7 +139,7 @@
       <limit effort="30" velocity="${VELOCITY_LIMIT_SCALE*6}" /> <!-- alpha tested velocity and effort limits -->
       <safety_controller k_velocity="1" />
       <xacro:if value="$(arg calibrated)">
-        <calibration falling="${0.0 + cal_r_forearm_roll_flag + calibration_data['transforms'][side+'_forearm_roll_joint'][3]}" />
+        <calibration falling="${calibration_data['calibration'][side+'_forearm_roll_joint']}" />
       </xacro:if>
       <xacro:unless value="$(arg calibrated)">
         <calibration rising="${0.0 + cal_r_forearm_roll_flag}" />
