@@ -93,7 +93,7 @@
       <limit effort="6.5" velocity="10"/> <!-- alpha tested velocity and effort limits -->
       <safety_controller  k_velocity="10" />
       <xacro:if value="$(arg calibrated)">
-        <calibration falling="${calibration_data['calibration'][suffix+'_rotation_joint']}" />
+        <calibration rising="${calibration_data['calibration'][suffix+'_rotation_joint']}" />
       </xacro:if>
       <xacro:unless value="$(arg calibrated)">
         <calibration rising="${ref_position}" />

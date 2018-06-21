@@ -16,7 +16,7 @@
       <limit lower="-3.007" upper="3.007" effort="2.645" velocity="6" /> <!-- alpha tested velocity and effort limits -->
       <safety_controller k_velocity="1.5" soft_lower_limit="${-3.007+0.15}" soft_upper_limit="${3.007-0.15}" k_position="100" />
       <xacro:if value="$(arg calibrated)">
-        <calibration falling="${calibration_data['calibration'][name+'_joint']}" />
+        <calibration rising="${calibration_data['calibration'][name+'_joint']}" />
       </xacro:if>
       <xacro:unless value="$(arg calibrated)">
         <calibration rising="0.0" />

@@ -139,7 +139,7 @@
       <limit effort="30" velocity="${VELOCITY_LIMIT_SCALE*6}" /> <!-- alpha tested velocity and effort limits -->
       <safety_controller k_velocity="1" />
       <xacro:if value="$(arg calibrated)">
-        <calibration falling="${calibration_data['calibration'][side+'_forearm_roll_joint']}" />
+        <calibration rising="${calibration_data['calibration'][side+'_forearm_roll_joint']}" />
       </xacro:if>
       <xacro:unless value="$(arg calibrated)">
         <calibration rising="${0.0 + cal_r_forearm_roll_flag}" />
