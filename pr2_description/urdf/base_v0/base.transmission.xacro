@@ -9,7 +9,7 @@
         <mechanicalReduction>${reflect * 624/35 * 80/18}</mechanicalReduction>
       </actuator>
       <joint name="${parent}_${suffix}_wheel_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
@@ -22,7 +22,7 @@
         <mechanicalReduction>${-1 * 624/35 * 80/18}</mechanicalReduction>
       </actuator>
       <joint name="${suffix}_rotation_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>

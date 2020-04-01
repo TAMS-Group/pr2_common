@@ -14,7 +14,7 @@
     <transmission name="${side}_gripper_trans" >
       <type>pr2_mechanism_model/PR2GripperTransmission</type>
       <joint name="${side}_gripper_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator       name="${side}_gripper_motor">
         <mechanicalReduction>1.0</mechanicalReduction>

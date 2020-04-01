@@ -12,7 +12,7 @@
         <mechanicalReduction>${-13/3 * 127.532/15.28}</mechanicalReduction>
       </actuator>
       <joint name="${side}_elbow_flex_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
@@ -25,7 +25,7 @@
         <mechanicalReduction>${-576/25 * 55/14}</mechanicalReduction>
       </actuator>
       <joint name="${side}_forearm_roll_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
